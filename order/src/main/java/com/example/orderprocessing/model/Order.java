@@ -1,9 +1,17 @@
 package com.example.orderprocessing.model;
 
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
+
+@Component
+@Lazy
 public class Order {
-    private final String orderId;
-    private final Book book;
+    private String orderId;
+    private Book book;
     private int quantity;
+
+    public Order() {
+    }
 
     public Order(String orderId, Book book, int quantity) {
         this.orderId = orderId;
@@ -15,12 +23,24 @@ public class Order {
         return orderId;
     }
 
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
     public Book getBook() {
         return book;
     }
 
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
     public int getQuantity() {
         return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public void updateQuantity(int quantity) {

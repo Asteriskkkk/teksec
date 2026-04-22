@@ -26,11 +26,11 @@ public class OrderProcessingApplication {
         firstOrder.updateQuantity(4);
         secondOrder.updateQuantity(1);
 
-        System.out.println("\nAfter quantity updates:\n");
+        System.out.println("After quantity updates:\n");
         printer.printOrder(firstOrder);
         printer.printOrder(secondOrder);
 
-        System.out.println("\n========================================");
+        System.out.println("========================================");
         System.out.println("Demo Complete");
         System.out.println("========================================\n");
 

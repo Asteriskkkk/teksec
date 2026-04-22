@@ -4,6 +4,7 @@ import com.example.librarysystem.model.Book;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,11 +13,15 @@ public class Library {
 
     private final List<Book> books;
 
-    @Value("#{${library.category.counts}}")
     private Map<String, Integer> categoryCounts;
 
     public Library(List<Book> books) {
         this.books = books;
+    }
+
+    @Value("#{${library.category.counts}}")
+    public void setCategoryCounts(Map<String, Integer> categoryCounts) {
+        this.categoryCounts = new HashMap<>(categoryCounts);
     }
 
     public int borrowBooks(String category, int requestedCount) {

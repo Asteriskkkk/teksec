@@ -1,0 +1,74 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+*.iws
+*.ipr
+
+# Spring Boot
+*.jar
+*.war
+*.nar
+*.ear
+
+# Gradle
+.gradle/
+build/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+.sts4-cache/
+
+# NetBeans
+nbproject/
+.nb-gradle/
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+logs/
+
+# Package files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Node/npm (if used)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Database files
+*.db
+*.sqlite
+*.h2.db
+
+# System files
+.DS_Store
+Thumbs.db
+
+# OS
+.env
+.env.local
+.env.*.local

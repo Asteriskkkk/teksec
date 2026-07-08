@@ -16,7 +16,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Service
 public class OrderService {
 
-    private static final String PRODUCT_SERVICE_URL = "http://PRODUCT-SERVICE/products/"\;
+    private static final String PRODUCT_SERVICE_URL = "http://PRODUCT-SERVICE/products/";
 
     private final OrderRepository orderRepository;
     private final RestTemplate restTemplate;

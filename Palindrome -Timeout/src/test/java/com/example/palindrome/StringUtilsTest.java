@@ -41,17 +41,21 @@ class StringUtilsTest {
 
     @Test
     void testIsPalindromeWithinTimeout() {
-        // Test Case 3: verify execution completes within timeout.
-        assertTimeout(Duration.ofMillis(100), () -> {
-            assertTrue(stringUtils.isPalindrome("madam"));
+        // Test Case 3: verify a moderately long palindrome completes within 1 second.
+        String moderatelyLongPalindrome = "AblewasIereIsawElba".repeat(200);
+
+        assertTimeout(Duration.ofSeconds(1), () -> {
+            assertTrue(stringUtils.isPalindrome(moderatelyLongPalindrome));
         });
     }
 
     @Test
     void testPreemptiveTimeoutForIsPalindrome() {
-        // Test Case 4: preemptive timeout verification.
-        assertTimeoutPreemptively(Duration.ofMillis(100), () -> {
-            assertTrue(stringUtils.isPalindrome("RaceCar"));
+        // Test Case 4: verify a very long palindrome completes within 1 second preemptively.
+        String veryLongPalindrome = "racecar".repeat(10_000);
+
+        assertTimeoutPreemptively(Duration.ofSeconds(1), () -> {
+            assertTrue(stringUtils.isPalindrome(veryLongPalindrome));
         });
     }
 }

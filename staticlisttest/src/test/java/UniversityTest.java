@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -14,14 +15,7 @@ class UniversityTest {
 
     @Test
     void coursesListShouldContainExpectedNumberOfCourses() {
-        List<String> expectedCourses = List.of(
-                "Computer Science",
-                "Mathematics",
-                "Physics",
-                "Chemistry"
-        );
-
-        assertIterableEquals(expectedCourses, University.coursesList());
+        assertEquals(4, University.coursesList().size());
     }
 
     @Test

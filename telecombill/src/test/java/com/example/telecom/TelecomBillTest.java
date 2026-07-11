@@ -1,7 +1,9 @@
 package com.example.telecom;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Order;
@@ -20,6 +22,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class TelecomBillTest {
 
+    @BeforeAll
+    static void setUpSuite() {
+        System.out.println("Starting TelecomBill test suite...");
+    }
+
     @BeforeEach
     void setUp() {
         System.out.println("Starting test execution...");
@@ -28,6 +35,11 @@ class TelecomBillTest {
     @AfterEach
     void tearDown() {
         System.out.println("Completed test execution.");
+    }
+
+    @AfterAll
+    static void tearDownSuite() {
+        System.out.println("Completed TelecomBill test suite.");
     }
 
     @Nested

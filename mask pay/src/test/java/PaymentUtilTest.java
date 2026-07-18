@@ -68,6 +68,21 @@ class PaymentUtilTest {
     }
 
     @Test
+    void formatCurrencyShouldSupportEuroSymbol() {
+        assertEquals("€1234.50", paymentUtil.formatCurrency(1234.5, "€"), "Euro values should be prefixed correctly.");
+    }
+
+    @Test
+    void formatCurrencyShouldSupportPoundSymbol() {
+        assertEquals("£1234.50", paymentUtil.formatCurrency(1234.5, "£"), "Pound values should be prefixed correctly.");
+    }
+
+    @Test
+    void formatCurrencyShouldSupportRupeeSymbol() {
+        assertEquals("₹1234.50", paymentUtil.formatCurrency(1234.5, "₹"), "Rupee values should be prefixed correctly.");
+    }
+
+    @Test
     void formatCurrencyShouldRoundHalfUpStyleToTwoDecimals() {
         assertEquals("$1234.57", paymentUtil.formatCurrency(1234.567, "$"), "Values should be rounded to two decimals.");
     }

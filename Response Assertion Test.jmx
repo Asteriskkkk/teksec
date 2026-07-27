@@ -26,8 +26,8 @@
 </HTTPSamplerProxy>
 <hashTree/>
 <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion 1" enabled="true">
-<collectionProp name="Asserion.test_strings"><stringProp name="49586">200</stringProp></collectionProp>
-<stringProp name="Assertion.custom_message"></stringProp><stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+<collectionProp name="Assertion.test_strings"><stringProp name="49586">200</stringProp></collectionProp>
+<stringProp name="Assertion.custom_message"/><stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
 <boolProp name="Assertion.assume_success">false</boolProp>
 <intProp name="Assertion.test_type">8</intProp>
 </ResponseAssertion>
@@ -55,8 +55,8 @@
 </HTTPSamplerProxy>
 <hashTree/>
 <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion 2" enabled="true">
-<collectionProp name="Asserion.test_strings"><stringProp name="49586">OK</stringProp></collectionProp>
-<stringProp name="Assertion.custom_message"></stringProp><stringProp name="Assertion.test_field">Assertion.response_message</stringProp>
+<collectionProp name="Assertion.test_strings"><stringProp name="0">OK</stringProp><stringProp name="1">OK</stringProp></collectionProp>
+<stringProp name="Assertion.custom_message"/><stringProp name="Assertion.test_field">Assertion.response_message</stringProp>
 <boolProp name="Assertion.assume_success">false</boolProp>
 <intProp name="Assertion.test_type">8</intProp>
 </ResponseAssertion>

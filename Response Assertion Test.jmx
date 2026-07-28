@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.2">
+<hashTree>
+<TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="My Assertion" enabled="true">
+<elementProp name="TestPlan.user_defined_variables" elementType="Arguments"><collectionProp name="Arguments.arguments"/></elementProp>
+</TestPlan>
+<hashTree>
+
+<ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="User Group 1" enabled="true">
+<elementProp name="ThreadGroup.main_controller" elementType="LoopController">
+<boolProp name="LoopController.continue_forever">false</boolProp>
+<stringProp name="LoopController.loops">1</stringProp>
+</elementProp>
+<stringProp name="ThreadGroup.num_threads">1</stringProp>
+<stringProp name="ThreadGroup.ramp_time">1</stringProp>
+</ThreadGroup>
+<hashTree>
+<HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="My Request 1" enabled="true">
+<boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments"><collectionProp name="Arguments.arguments"/></elementProp>
+<stringProp name="HTTPSampler.domain">myapps</stringProp>
+<stringProp name="HTTPSampler.port">8082</stringProp>
+<stringProp name="HTTPSampler.protocol">http</stringProp>
+<stringProp name="HTTPSampler.path">/Shopify/</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+</HTTPSamplerProxy>
+<hashTree/>
+<ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion 1" enabled="true">
+<collectionProp name="Assertion.test_strings"><stringProp name="49586">200</stringProp></collectionProp>
+<stringProp name="Assertion.custom_message"/><stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+<boolProp name="Assertion.assume_success">false</boolProp>
+<intProp name="Assertion.test_type">8</intProp>
+</ResponseAssertion>
+<hashTree/>
+<ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report 1" enabled="true"><stringProp name="filename">Aggregate Report 1.csv</stringProp></ResultCollector>
+<hashTree/>
+</hashTree>
+
+<ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="User Group 2" enabled="true">
+<elementProp name="ThreadGroup.main_controller" elementType="LoopController">
+<boolProp name="LoopController.continue_forever">false</boolProp>
+<stringProp name="LoopController.loops">1</stringProp>
+</elementProp>
+<stringProp name="ThreadGroup.num_threads">1</stringProp>
+<stringProp name="ThreadGroup.ramp_time">1</stringProp>
+</ThreadGroup>
+<hashTree>
+<HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="My Request 2" enabled="true">
+<boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments"><collectionProp name="Arguments.arguments"/></elementProp>
+<stringProp name="HTTPSampler.domain">myapps</stringProp>
+<stringProp name="HTTPSampler.port">8082</stringProp>
+<stringProp name="HTTPSampler.path">/Shopify/</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+</HTTPSamplerProxy>
+<hashTree/>
+<ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion 2" enabled="true">
+<collectionProp name="Assertion.test_strings"><stringProp name="0">OK</stringProp><stringProp name="1">OK</stringProp></collectionProp>
+<stringProp name="Assertion.custom_message"/><stringProp name="Assertion.test_field">Assertion.response_message</stringProp>
+<boolProp name="Assertion.assume_success">false</boolProp>
+<intProp name="Assertion.test_type">8</intProp>
+</ResponseAssertion>
+<hashTree/>
+<ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report 2" enabled="true"><stringProp name="filename">Aggregate Report 2.csv</stringProp></ResultCollector>
+<hashTree/>
+</hashTree>
+
+<ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true"><stringProp name="filename"/></ResultCollector>
+<hashTree/>
+</hashTree>
+</hashTree>
+</jmeterTestPlan>

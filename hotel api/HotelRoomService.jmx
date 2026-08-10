@@ -91,6 +91,7 @@
           <hashTree>
             <XPathAssertion guiclass="XPathAssertionGui" testclass="XPathAssertion" testname="My XPath Assertion" enabled="true">
               <stringProp name="XPath.xpathQuery">/rooms/room[roomId='11' and hotelId='1001a' and roomType='SINGLE' and roomStatus='NOTAVAILABLE' and roomPrice='20000.0']</stringProp>
+              <stringProp name="XPathAssertion.xpathQuery">/rooms/room[roomId='11' and hotelId='1001a' and roomType='SINGLE' and roomStatus='NOTAVAILABLE' and roomPrice='20000.0']</stringProp>
               <boolProp name="XPath.negate">false</boolProp><boolProp name="XPath.tolerant">false</boolProp><boolProp name="XPath.namespace">false</boolProp><boolProp name="XPath.validate">false</boolProp><boolProp name="XPath.whitespace">false</boolProp><boolProp name="XPath.download_dtds">false</boolProp>
             </XPathAssertion>
             <hashTree/>

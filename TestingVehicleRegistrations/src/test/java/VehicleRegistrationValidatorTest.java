@@ -76,17 +76,25 @@ public class VehicleRegistrationValidatorTest {
                     "Registration with digits before letters should return false");
     }
     
-    // Invalid input tests - missing digits
+    // Invalid input tests - missing digits after space
     @Test
     @Order(8)
-    public void testInvalidRegistrationMissingDigits() {
+    public void testInvalidRegistrationMissingDigitsAfterSpace() {
         assertFalse(validator.validateVehicleRegistration("AB12 345"), 
-                    "Registration with insufficient digits should return false");
+                    "Registration with only 3 digits after space should return false");
+    }
+    
+    // Invalid input tests - missing single digit after space
+    @Test
+    @Order(9)
+    public void testInvalidRegistrationMissingSingleDigitAfterSpace() {
+        assertFalse(validator.validateVehicleRegistration("AB12 12"), 
+                    "Registration with only 2 digits after space should return false");
     }
     
     // Invalid input tests - extra digits
     @Test
-    @Order(9)
+    @Order(10)
     public void testInvalidRegistrationExtraDigits() {
         assertFalse(validator.validateVehicleRegistration("AB12 34567"), 
                     "Registration with extra digits should return false");
@@ -94,7 +102,7 @@ public class VehicleRegistrationValidatorTest {
     
     // Invalid input tests - null
     @Test
-    @Order(10)
+    @Order(11)
     public void testInvalidRegistrationNull() {
         assertFalse(validator.validateVehicleRegistration(null), 
                     "Null registration should return false");
@@ -102,7 +110,7 @@ public class VehicleRegistrationValidatorTest {
     
     // Invalid input tests - empty string
     @Test
-    @Order(11)
+    @Order(12)
     public void testInvalidRegistrationEmptyString() {
         assertFalse(validator.validateVehicleRegistration(""), 
                     "Empty registration should return false");
@@ -110,7 +118,7 @@ public class VehicleRegistrationValidatorTest {
     
     // Invalid input tests - only letters
     @Test
-    @Order(12)
+    @Order(13)
     public void testInvalidRegistrationOnlyLetters() {
         assertFalse(validator.validateVehicleRegistration("ABCD EFGH"), 
                     "Registration with only letters should return false");
@@ -118,7 +126,7 @@ public class VehicleRegistrationValidatorTest {
     
     // Invalid input tests - only digits
     @Test
-    @Order(13)
+    @Order(14)
     public void testInvalidRegistrationOnlyDigits() {
         assertFalse(validator.validateVehicleRegistration("12 3456"), 
                     "Registration with only digits should return false");
